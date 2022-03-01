@@ -9,4 +9,11 @@ let userChoice;
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',(e) => {
     userChoice = e.target.id;
     userChoiceDisplay.innerHTML = userChoice;
+    generateComputerChoice();
 }))
+
+let generateComputerChoice = () => {
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1);//or just 3 as we have only 3 choises
+    console.log(randomNumber)
+};
+ 
